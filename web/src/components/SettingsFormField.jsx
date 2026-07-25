@@ -135,7 +135,7 @@ export function SortableConfigurator({
           Visible
         </div>
         <div
-          className={`flex flex-col gap-1 rounded-lg transition-all duration-200${draggingSource === 'available' ? 'bg-primary/5 ring-primary/40 ring-1' : ''}`}
+          className={`flex flex-col gap-1 rounded-lg transition-all duration-200 ${draggingSource === 'available' ? 'bg-primary/5 ring-primary/40 ring-1' : ''}`}
           onDragOver={e => e.preventDefault()}
           onDrop={e => {
             e.preventDefault();
@@ -244,7 +244,7 @@ export function SortableConfigurator({
               draggable
               onDragStart={e => startDrag(e, def.id, 'available')}
               onDragEnd={endDrag}
-              className={`border-base-content/10 bg-base-100 flex min-h-14 cursor-grab items-center gap-2 rounded-lg border px-2 py-1.5 transition-all duration-150${draggingId === def.id ? 'opacity-40' : ''}`}
+              className={`border-base-content/10 bg-base-100 flex min-h-14 cursor-grab items-center gap-2 rounded-lg border px-2 py-1.5 transition-all duration-150 ${draggingId === def.id ? 'opacity-40' : ''}`}
             >
               <span className='text-base-content/20 select-none'>⠿</span>
               <span className='flex-1 text-sm'>{def.label}</span>
