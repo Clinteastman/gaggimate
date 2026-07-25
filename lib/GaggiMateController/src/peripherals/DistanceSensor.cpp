@@ -27,7 +27,7 @@ void DistanceSensor::loop() {
     if (measurements == 0) {
         _callback(currentMillis);
     }
-    ESP_LOGV("DistanceSensor", "Received measurement: %d (%d objects)", currentMillis);
+    ESP_LOGV("DistanceSensor", "Received measurement: %d", currentMillis);
 }
 
 void DistanceSensor::loopTask(void *arg) {
