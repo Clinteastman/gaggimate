@@ -53,8 +53,8 @@ export function BluetoothTab() {
   });
 
   const {
-    isInfoLoading,
-    isInfoError,
+    isLoading: isInfoLoading,
+    isError: isInfoError,
     data: connectedScale = [],
   } = useQuery(`scale-info-${key}`, async () => {
     const response = await fetch(`/api/scales/info`);
