@@ -359,7 +359,7 @@ export function ExtendedPhase({ phase, index, onChange, onRemove, pressureAvaila
                 onClick={() =>
                   onFieldChange('transition', { ...phase.transition, type: 'instant', duration: 0 })
                 }
-                aria-pressed={mode === 'off'}
+                aria-pressed={(phase.transition?.type || 'instant') === 'instant'}
                 aria-label='Instant'
               >
                 Instant
@@ -509,7 +509,7 @@ export function ExtendedPhase({ phase, index, onChange, onRemove, pressureAvaila
                       onFieldChange('transition', { ...phase.transition, adaptive: true })
                     }
                     aria-pressed={!!phase.transition?.adaptive}
-                    aria-label='Linear'
+                    aria-label='Start from current value'
                   >
                     Current value
                   </button>
